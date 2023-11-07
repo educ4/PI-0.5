@@ -1,0 +1,16 @@
+.container{
+    align-items: center;
+    padding: 20px;
+    
+}
+
+.video{
+    padding: 90px;
+    margin-left: 570px;
+}
+
+.btn{
+    margin: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+}

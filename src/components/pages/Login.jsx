@@ -1,11 +1,27 @@
 import {Link} from 'react-router-dom'
 
+import{useForm} from 'react-hook-form';
+
 import React from "react";
 import styles from './Login.module.css';
-import Input from '../../form/input';
-import SubmitButton from '../../form/submitButton';
 
-function Login(){
+
+
+const Login = () => {
+
+  const {
+    register, 
+    handleSubmit, 
+    formState: { errors },
+} = useForm();
+
+  console.log(errors);
+
+  const onSubmit = (data) =>{
+    console.log(data)
+  };
+
+  console.log("RENDER");
 
     return (
       
@@ -15,31 +31,52 @@ function Login(){
           <h1>Login</h1>
         
 
-          <Input 
+          <div className={styles.box}>
+            <label>CPF ou CFEP: </label>
+            <input
+              className={errors?.id && "input-error"}
               type="text"
+              minLength="10"
+              maxLength="14"
               text="CPF ou CFEP: "
               name="id"
-              placeholder="CPF ou CFEP:"
-              
-          />
+              placeholder="CPF ou CFEP (com pontos e traços):"
+              required
+              {...register("id", { required: true, minLength: 10, maxLength: 14,})} />
+            {errors?.id?.type == 'required' && (<p className="error-message">CPF ou CFEP é requerido</p>)}
+            {errors?.id?.type == 'minLength' && (<p className="error-message"> Necessário pelo menos 10 caracteres</p>)}
+            
+          </div>
 
-          <Input 
-              type="password"
-              text="Senha: "
-              name="password"
-              placeholder="Senha"
-              
-          />
+          <div className={styles.box}>
+          <label> Senha: </label>
+          <input
+            className={errors?.password && "input-error"}
+            type="password"
+            minLength="8"
+            text="Senha: "
+            name="password"
+            placeholder="Digite uma senha de 8 ou mais digítos."
+            required
+            {...register("password", { required: true, minLength: 8 })} />
+
+          {errors?.password?.type == 'minLength' && (<p className="error-message">Senha precisa de pelo menos 8 caracteres</p>)}
+
+          {errors?.password?.type == 'required' && (<p className="error-message">Senha é requerida</p>)}
+        </div>
+
           <div  className={styles.btnLogin}>
-            <SubmitButton className={styles.button} text="Login"/>
+          
+          <button
+            text="Login"
+            onClick={() => handleSubmit(onSubmit)()}
+          >Login
+          </button>
+
+        
           </div>
           
-          <div className={styles.box}>
-            Não possui conta? 
-            <Link to='/registrar'>
-              <SubmitButton text="Cadastro"/>
-             </Link>
-          </div>
+          
 
 
         </form>

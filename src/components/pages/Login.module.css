@@ -19,9 +19,20 @@
 }
 
 .box{
-    text-align: center;
     display: flex;
-    gap: 20px;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.box label{
+    margin-bottom:.6em;
+    font-weight: bold;
+}
+
+.box input{
+    padding: 0.7em;
+    border-radius: 0;
+    border: none;
 }
 
 .btnLogin{

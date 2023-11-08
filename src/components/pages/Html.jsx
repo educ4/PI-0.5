@@ -5,7 +5,7 @@ import SubmitButton from '../../form/submitButton';
 function Html(){
     return(
         <div className={styles.container}>
-            <h1>HTML 5 - Do Básico ao Avançado</h1>
+            <h1 className={styles.titulo}>HTML 5 - Do Básico ao Avançado</h1>
             <hr />
             <div className={styles.btn}>
                 <SubmitButton text="Matricular-se"></SubmitButton>

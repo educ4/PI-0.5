@@ -65,9 +65,9 @@ const Login = () => {
           {errors?.password?.type == 'required' && (<p className="error-message">Senha é requerida</p>)}
         </div>
 
-          <div  className={styles.btnLogin}>
+          <div  className={styles.boxb}>
           
-          <button
+          <button className={styles.btnLogin}
             text="Login"
             onClick={() => handleSubmit(onSubmit)()}
           >Login

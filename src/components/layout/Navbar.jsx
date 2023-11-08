@@ -10,7 +10,7 @@ const Navbar = () => {
     <nav className={styles.navbar}>
         <Container>
             <Link to='/'>
-                <img src={logo} alt="img" />
+                <img src={logo} alt="img"  className={styles.logo} />
             </Link>
             <ul className={styles.list}>
                 <li className={styles.item}>

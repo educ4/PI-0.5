@@ -8,6 +8,7 @@ import css from '../../img/csslogo.png';
 import react from '../../img/reactlogo.png';
 import spring from '../../img/spring.png';
 import html from '../../img/html.png';
+import Ranking from './ranking'
 import SubmitButton from '../../form/submitButton';
 
 
@@ -80,10 +81,12 @@ function Cursos(){
                 <p>Componentes e Props no React</p>
                 <p>Manipulação de Eventos no React</p>
                 <p>Roteamento no React com React Router</p>
-                
-               
             </div>
-          
+            <div>
+              <Link to='/ranking'>
+                <button className={styles.button}>Clique Aqui para ver o ranking de nossos cursos</button>
+              </Link>
+            </div>
         </div>
       </div>
   )   

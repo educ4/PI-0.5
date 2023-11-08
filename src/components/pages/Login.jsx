@@ -7,6 +7,7 @@ import styles from './Login.module.css';
 
 
 
+
 const Login = () => {
 
   const {
@@ -28,7 +29,7 @@ const Login = () => {
       
       <div className={styles.container}>
         <form className={styles.form}>
-          <h1>Login</h1>
+          <h1 className={styles.titulo}>Login</h1>
         
 
           <div className={styles.box}>
@@ -43,8 +44,8 @@ const Login = () => {
               placeholder="CPF ou CFEP (com pontos e traços):"
               required
               {...register("id", { required: true, minLength: 10, maxLength: 14,})} />
-            {errors?.id?.type == 'required' && (<p className="error-message">CPF ou CFEP é requerido</p>)}
-            {errors?.id?.type == 'minLength' && (<p className="error-message"> Necessário pelo menos 10 caracteres</p>)}
+            {errors?.id?.type == 'required' && (<p className={styles.error}>CPF ou CFEP é requerido</p>)}
+            {errors?.id?.type == 'minLength' && (<p className={styles.error}> Necessário pelo menos 10 caracteres</p>)}
             
           </div>
 
@@ -60,14 +61,14 @@ const Login = () => {
             required
             {...register("password", { required: true, minLength: 8 })} />
 
-          {errors?.password?.type == 'minLength' && (<p className="error-message">Senha precisa de pelo menos 8 caracteres</p>)}
+          {errors?.password?.type == 'minLength' && (<p className={styles.error}>Senha precisa de pelo menos 8 caracteres</p>)}
 
-          {errors?.password?.type == 'required' && (<p className="error-message">Senha é requerida</p>)}
+          {errors?.password?.type == 'required' && (<p className={styles.error}>Senha é requerida</p>)}
         </div>
 
           <div  className={styles.boxb}>
           
-          <button className={styles.btnLogin}
+          <button className={styles.btn}
             text="Login"
             onClick={() => handleSubmit(onSubmit)()}
           >Login

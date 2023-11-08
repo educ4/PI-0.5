@@ -7,7 +7,7 @@ function AreaUser(){
     return (
         <div className={styles.container}>
             <div className={styles.header}>
-                <h1>Bem Vindo user</h1>
+                <h1 className={styles.titulo}>Bem Vindo user</h1>
                 <div className={styles.buttonBox}>
                     <SubmitButton
                          

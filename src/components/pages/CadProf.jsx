@@ -22,7 +22,7 @@ import validator from 'validator';
       alert(JSON.stringify(data));
     };
 
-    const watchPassword = watch("password");
+    const watchPassword = watch("senha");
     
     return(
       
@@ -34,13 +34,13 @@ import validator from 'validator';
           <div className={styles.box}>
             <label>Nome Completo</label>
             <input
-              className={errors?.name && "input-error"}
+              className={errors?.nome && "input-error"}
               type="text"
               text="Nome Completo: "
               name="nome"
               placeholder="Nome Completo"
-              {...register("name", { required: true })} />
-            {errors?.name?.type == 'required' && <p className="error-message">Nome é requerido</p>}
+              {...register("nome", { required: true })} />
+            {errors?.nome?.type == 'required' && <p className={styles.error}>Nome é requerido</p>}
           </div>
 
           <div className={styles.box}>
@@ -55,8 +55,8 @@ import validator from 'validator';
               placeholder="CFEP (com pontos e traços):"
               required
               {...register("id", { required: true, minLength: 10, maxLength: 10,})} />
-            {errors?.id?.type == 'required' && (<p className="error-message">CFEP é requerido</p>)}
-            {errors?.id?.type == 'minLength' && (<p className="error-message"> Necessário pelo menos 10 caracteres</p>)}
+            {errors?.id?.type == 'required' && (<p className={styles.error}>CFEP é requerido</p>)}
+            {errors?.id?.type == 'minLength' && (<p className={styles.error}> Necessário pelo menos 10 caracteres</p>)}
             
           </div>
           <div className={styles.box}>
@@ -69,8 +69,8 @@ import validator from 'validator';
               placeholder="E-mail"
               required
               {...register("email", { required: true, validate: (value) => validator.isEmail(value) })} />
-            {errors?.email?.type == 'required' && (<p className="error-message">E-mail é requerido</p>)}
-            {errors?.email?.type == 'validate' && (<p className="error-message">E-mail é invalido</p>)}
+            {errors?.email?.type == 'required' && (<p className={styles.error}>E-mail é requerido</p>)}
+            {errors?.email?.type == 'validate' && (<p className={styles.error}>E-mail é invalido</p>)}
           </div>
 
           <div className={styles.box}>
@@ -88,7 +88,7 @@ import validator from 'validator';
               <option value="M">Masculino</option>
               <option value="F">Feminino</option>
             </select>
-            {errors?.sexo?.type =='validate' &&(<p className="error-message">Sexo requerido</p>)}
+            {errors?.sexo?.type =='validate' &&(<p className={styles.error}>Sexo requerido</p>)}
           </div>
         <div className={styles.box}>
           <label> Senha: </label>
@@ -100,11 +100,11 @@ import validator from 'validator';
             name="senha"
             placeholder="Digite uma senha de 8 ou mais digítos."
             required
-            {...register("password", { required: true, minLength: 8})} />
+            {...register("senha", { required: true, minLength: 8})} />
 
-          {errors?.password?.type == 'minLength' && (<p className="error-message">Senha precisa de pelo menos 8 caracteres</p>)}
+          {errors?.senha?.type == 'minLength' && (<p className={styles.error}>Senha precisa de pelo menos 8 caracteres</p>)}
 
-          {errors?.password?.type == 'required' && (<p className="error-message">Senha é requerida</p>)}
+          {errors?.senha?.type == 'required' && (<p className={styles.error}>Senha é requerida</p>)}
         </div>
         
         <div className={styles.box}>
@@ -117,9 +117,9 @@ import validator from 'validator';
             placeholder="Confirme a senha."
             required
             {...register("passwordConfirmation", { required: true, minLength: 8, validate:(value) => value == watchPassword })} />
-          {errors?.passwordConfirmation?.type == 'minLength' && (<p className="error-message">Confirmação de Senha precisa de pelo menos 8 caracteres</p>)}
-          {errors?.passwordConfirmation?.type == 'validate' && (<p className="error-message">Senhas não são iguais.</p>)}
-          {errors?.passwordConfirmation?.type == 'required' && (<p className="error-message">Confirmação de Senha é requerida</p>)}   
+          {errors?.passwordConfirmation?.type == 'minLength' && (<p className={styles.error}>Confirmação de Senha precisa de pelo menos 8 caracteres</p>)}
+          {errors?.passwordConfirmation?.type == 'validate' && (<p className={styles.error}>Senhas não são iguais.</p>)}
+          {errors?.passwordConfirmation?.type == 'required' && (<p className={styles.error}>Confirmação de Senha é requerida</p>)}   
         </div>
         <div>
           <input
@@ -127,12 +127,12 @@ import validator from 'validator';
             name="privacy-policy"
             {...register("privacyTerms", { required: true })} />
           <label>Eu concordo com os Termos de Privacidade</label>
-          {errors?.privacyTerms?.type == "required" &&(<p className="error-message">Você precisa concordar com os termos de privacidade.</p>)}
+          {errors?.privacyTerms?.type == "required" &&(<p className={styles.error}>Você precisa concordar com os termos de privacidade.</p>)}
         </div>
 
         <div className={styles.buttonBox}>
           <button
-            text="Criar Conta"
+            text="Criar Conta" className={styles.btn}
             onClick={() => handleSubmit(onSubmit)()}
           >Criar Conta
           </button>

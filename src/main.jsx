@@ -18,6 +18,7 @@ import Html from './components/pages/Html';
 import AreaUser from './components/pages/AreaUser';
 import CadastroAluno from'./components/pages/CadastroAluno';
 import CadProf from "./components/pages/CadProf.jsx";
+import Ranking from './components/pages/ranking.jsx'
 
 
 
@@ -61,6 +62,11 @@ const router = createBrowserRouter([
         path: "/area-user",
         element: <AreaUser />,
       },
+      {
+        path: "/ranking",
+        element: <Ranking />,
+      },
+      
       
     ]
   },

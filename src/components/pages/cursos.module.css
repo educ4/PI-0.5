@@ -1,48 +1,64 @@
-
-
-h1{
-    color: white;
+/* cursos.module.css */
+.container {
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 2rem;
     text-align: center;
-    padding: 20px;
-    margin: 20px;
-    
-}
-
-h2{
-    color:white;
-    padding: 20px;
-    text-align: center;
-}
-
-
-.box1{
-    width: 1800px;
-    height: 500px;
-    background-color:rgb(0, 0, 0);
-    margin: 40px;
-    border-radius: 10px;
+  }
+  
+  .titulo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: black;
+  }
+  
+  .box1 {
     display: flex;
-    
-    
-}
-
-
-.box2{
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .box2 {
     width: 300px;
-    height: 400px;
-    background-color:rgb(5, 29, 51);
-    margin: 50px;
-    padding: 15px;
+    background-color: #fff;
+    margin: 20px;
+    padding: 20px;
     border-radius: 10px;
-    
-    
-}    
-
-
-.logo{
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    overflow: hidden;
+  }
+  
+  .box2:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    background-color: #e0e0e0;
+  }
+  
+  .logo {
     width: 100px;
     height: 100px;
-    text-align: center;
-    
-}
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    margin-top: 10px;
+  }
 
+  .logo1{
+    width: 100px;
+    height: 100px;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: black;
+  }
+  
+  p {
+    font-size: 1rem;
+    margin: 5px;
+  }
+  

@@ -16,6 +16,8 @@ import Login from './components/pages/Login';
 import Registrar from './components/pages/Registrar';
 import Html from './components/pages/Html';
 import AreaUser from './components/pages/AreaUser';
+import CadastroAluno from'./components/pages/CadastroAluno';
+import CadProf from "./components/pages/CadProf.jsx";
 
 
 
@@ -41,6 +43,15 @@ const router = createBrowserRouter([
       {
         path: "/registrar",
         element: <Registrar />,
+      },
+      {
+        path: "/cadastro-aluno",
+        element: <CadastroAluno/>,
+      },
+
+      {
+        path: "/cadastro-professor",
+        element: <CadProf/>,
       },
       {
         path: "/curso-html",

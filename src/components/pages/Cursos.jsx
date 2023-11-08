@@ -14,7 +14,7 @@ import SubmitButton from '../../form/submitButton';
 function Cursos(){
     return (
       <div className = {styles.container}>
-        <h1>Cursos Disponíveis</h1>
+        <h1 className={styles.titulo}>Cursos Disponíveis</h1>
         <div className = {styles.box1}>
         
           
@@ -23,7 +23,7 @@ function Cursos(){
                 <Link to='/'>
                   <img src={spring} alt="springlogo" className={styles.logo}/>
                 </Link>
-                  <h2>Spring Boot</h2>
+                  <h2>Spring Boot</h2><br />
                   <p>Introdução ao Spring Boot</p>
                   <p>Configuração e Propriedades</p>
                   <p>Desenvolvimento de Aplicativos Web</p>
@@ -36,7 +36,7 @@ function Cursos(){
               <Link to='/'>      
                 <img src={js} alt="jslogo" className={styles.logo} />
               </Link> 
-                <h2>Java Scripit</h2>
+                <h2>Java Script</h2><br />
                 <p>Introdução ao JavaScript</p>
                 <p>Manipulação do DOM com JavaScript</p>
                 <p>Funções e Escopo em JavaScript</p>
@@ -46,9 +46,9 @@ function Cursos(){
 
             <div className={styles.box2}>
               <Link to='/curso-html'>
-                <img src={html} alt="htmllogo" className={styles.logo} />
+                <img src={html} alt="htmllogo" className={styles.logo1} />
               </Link>
-                <h2>HTML5</h2>
+                <h2>HTML5</h2><br />
                 <p> Introdução a HTML5</p>
                 <p>Estrutura Básica de um Documento HTML5</p>
                 <p>Elementos Semânticos em HTML5</p>
@@ -61,7 +61,7 @@ function Cursos(){
             
             <Link to='/'><img src={css} alt="csslogo" className={styles.logo}/>
             </Link> 
-              <h2> CSS 3</h2>
+              <h2> CSS 3</h2><br />
               <p>Introdução ao CSS 3</p>
               <p>Módulo de Animações CSS</p>
               <p>Módulo de Layouts</p>
@@ -75,7 +75,7 @@ function Cursos(){
               <Link to='/'>
                 <img src={react} alt="reactlogo" className={styles.logo} />
               </Link>   
-                <h2>ReactJS</h2>
+                <h2>ReactJS</h2><br />
                 <p>Introdução ao ReactJS</p>
                 <p>Componentes e Props no React</p>
                 <p>Manipulação de Eventos no React</p>

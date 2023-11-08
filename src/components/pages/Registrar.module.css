@@ -1,75 +1,12 @@
-.container{
-    width: 700px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin:50px auto;
-    background-color: rgb(5, 29, 51);
-    
-
-    color: white;
-    border-radius: 15px;
-    
-}
-
-.form{
-    width: 100%;
-    max-width: 650px;
-    min-height: 70vh;
-    margin:0 auto;
-    box-sizing: border-box;
-    
-    
-}
-
-.box{
+.container {
     display: flex;
     flex-direction: column;
-    margin-bottom: 1em;
-}
-
-.box label{
-    margin-bottom:.6em;
-    font-weight: bold;
-}
-
-.box input{
-    padding: 0.7em;
-    border-radius: 0;
-    border: none;
-}
-
-.box select{
-    padding: 0.7em;
-    border-radius: 0;
-    border: none;
-
-}    
-
-
-
-h1{
-    color: rgb(255, 255, 255);
-    padding: 0;
-}
-
-.buttonBox{
-    display: flex;
     justify-content: center;
-    margin-top: 40px;
-}
-button{
-    background-color: #42a0a3;
-    color:#000000;
-    padding:0.7em 1.2em;
-    text-decoration: .5s;
-    transition: .5s;
-    cursor: pointer;
-    border:1cm;
-    border-radius:8px;
-    
-}
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .button {
+    margin: 10px;
+  }
 
-button:hover{
-    color: #ffffff;
-}

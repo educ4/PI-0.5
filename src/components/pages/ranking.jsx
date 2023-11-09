@@ -33,16 +33,18 @@ import grafico from '../../img/grafico.png';
 function ranking() {
     return (
         <div className = {styles.container}>
-
+            <hr />    
             <h1 className={styles.titulo}>
                 Ranking
             </h1>
+            <hr />
 
             <div className = {styles.box1}>
                     <img src={grafico} alt="grafico" className={styles.grafico}/>
-                </div>
-
-
+            </div>
+            <hr />
+                <h1>Avaliação de usuários</h1>
+                <hr />
             <div className = {styles.box}>
                 
                 <div className = {styles.box2}>

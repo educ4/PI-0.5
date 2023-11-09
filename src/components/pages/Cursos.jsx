@@ -46,7 +46,7 @@ function Cursos(){
             </div>
 
             <div className={styles.box2}>
-              <Link to='/curso-html'>
+              <Link to='/html'>
                 <img src={html} alt="htmllogo" className={styles.logo1} />
               </Link>
                 <h2>HTML5</h2><br />

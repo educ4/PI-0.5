@@ -19,6 +19,8 @@ import AreaUser from './components/pages/AreaUser';
 import CadastroAluno from'./components/pages/CadastroAluno';
 import CadProf from "./components/pages/CadProf.jsx";
 import Ranking from './components/pages/ranking.jsx'
+import Termos from './components/pages/termos.jsx';
+import HTML1 from './components/pages/HTML1.jsx';
 
 
 
@@ -55,8 +57,12 @@ const router = createBrowserRouter([
         element: <CadProf/>,
       },
       {
-        path: "/curso-html",
+        path: "/html",
         element: <Html />,
+      },
+      {
+        path: "/curso-html",
+        element: <HTML1 />,
       },
       {
         path: "/area-user",
@@ -66,6 +72,11 @@ const router = createBrowserRouter([
         path: "/ranking",
         element: <Ranking />,
       },
+      {
+        path: "/termos",
+        element: <Termos />,
+      },
+      
       
       
     ]

@@ -125,5 +125,10 @@ body {
     font-size: 1rem; 
     color: black; 
   }
+
+  .termos{
+    margin:auto;
+    display:flex;
+  }
   
   

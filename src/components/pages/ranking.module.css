@@ -52,7 +52,11 @@
     height: 220px;
   }
   
-
+.grafico{
+  width: auto;
+  height: auto;
+  width: 900px;
+}
   
   
   h2 {

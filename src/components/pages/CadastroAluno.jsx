@@ -1,8 +1,10 @@
 import React from 'react';
 import styles from './Cadastro.module.css';
+import termos from './termos';
 
 import{useState} from 'react';
 import{useForm} from 'react-hook-form';
+import {Link} from 'react-router-dom';
 
 import validator from 'validator';
 
@@ -122,11 +124,20 @@ import validator from 'validator';
           {errors?.passwordConfirmation?.type == 'required' && (<p className={styles.error}>Confirmação de Senha é requerida</p>)}   
         </div>
         <div>
-          <input
+          <input 
             type="checkbox"
             name="privacy-policy"
             {...register("privacyTerms", { required: true })} />
-          <label>Eu concordo com os Termos de Privacidade</label>
+
+            
+              <label> Eu concordo com os  </label> 
+              
+              <Link to="/termos">
+                 Termos de Privacidade.
+              </Link>
+
+            
+          
           {errors?.privacyTerms?.type == "required" &&(<p className={styles.error}>Você precisa concordar com os termos de privacidade.</p>)}
         </div>
 
